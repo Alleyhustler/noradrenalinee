@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url('lord\ gay.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Creepster', cursive;
+    color: white;
+}
+
+.social-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-indent: -9999px; /* Hide text */
+    background-size: cover;
+    background-position: center;
+}
+
+.twitter-icon {
+    background-image: url('https://abs.twimg.com/favicons/twitter.ico'); /* Twitter icon */
+}
+
+.telegram-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #0088cc; /* Telegram blue */
+    clip-path: circle();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telegram-icon::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath fill="%23ffffff" d="M23.491 2.509c-.27-.182-.676-.27-1.13-.229-.325.027-.705.157-1.05.406L3.67 11.662c-.957.548-1.462.991-1.807 1.506-.337.516-.674.978-.806 1.381-.138.423.143.855.537 1.114.128.082.27.124.428.124.175 0 .373-.055.577-.186l3.046-1.847 3.062-1.847c.6-.365 1.22-.644 1.826-.831l1.057-.396 2.38.72.675 3.045c.09.413.282.788.553 1.09.272.303.605.54.978.686.377.14.752.185 1.132.113.331-.058.66-.189.952-.379.12-.078.256-.185.42-.305.186-.141.367-.275.543-.412.276-.214.572-.417.857-.573.312-.18.628-.334.943-.457l3.412-1.084 3.43-1.075c.445-.14.722-.282.82-.423.118-.163.136-.363.055-.553-.084-.156-.256-.258-.412-.313l-1.634-.327c-.53-.104-1.072-.239-1.664-.397-.591-.156-1.18-.334-1.77-.528l-1.236-.364 1.83-1.088c.345-.22.657-.477.897-.79.236-.316.434-.681.566-1.074.127-.392.131-.796.09-1.17l-.103-1.159L23.18 3.087c.159-.299.065-.629-.168-.783z"%3E%3C/path%3E%3C/svg%3E');
+    background-size: 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+#wheel {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    transform-origin: center center;
+}
+
+.wheel-item {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'Creepster', cursive;
+}
+
+.wheel-item:nth-child(1) {
+    transform: rotate(0deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.wheel-item:nth-child(2) {
+    transform: rotate(180deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#wheel.spinning {
+    transition: transform 3s ease-out;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: 'Creepster', cursive;
+}
